@@ -639,7 +639,7 @@ public class JPF_java_lang_String extends gov.nasa.jpf.vm.JPF_java_lang_String {
 	}
 
 	@MJI
-	public static int valueOf__D__Ljava_lang_String_2(MJIEnv env, int objRef, double value) {
+	public int valueOf__D__Ljava_lang_String_2(MJIEnv env, int objRef, double value) {
 		Object[] attrs = env.getArgAttributes();
 		String res = String.valueOf(value);
 		if (attrs != null) {
