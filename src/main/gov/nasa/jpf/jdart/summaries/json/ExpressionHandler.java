@@ -29,7 +29,7 @@ import gov.nasa.jpf.constraints.util.ExpressionUtil;
 import gov.nasa.jpf.constraints.util.TypeUtil;
 import java.lang.reflect.Type;
 import org.antlr.runtime.RecognitionException;
-
+import gov.nasa.jpf.constraints.exceptions.ImpreciseRepresentationException;
 /**
  *
  */
