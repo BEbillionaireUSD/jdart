@@ -51,7 +51,7 @@ public class ExpressionHandler implements
 
   @Override
   public Expression<?> deserialize(JsonElement je, Type type, JsonDeserializationContext jdc)
-          throws JsonParseException, ImpreciseRepresentationException { // New Exception
+          throws JsonParseException {
     try {
       String s = je.getAsJsonPrimitive().getAsString();      
       if (s.startsWith("[V]")) {
@@ -61,7 +61,7 @@ public class ExpressionHandler implements
         return ParserUtil.parseArithmetic(s.substring(3));
       }      
       return ParserUtil.parseLogical(s.substring(3));
-    } catch (RecognitionException ex) {
+    } catch (RecognitionException | ImpreciseRepresentationException ex) {
       throw new JsonParseException(ex);
     }
   }
